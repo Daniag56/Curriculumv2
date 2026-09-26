@@ -1,7 +1,8 @@
 header {
-    background-color: #d5e2e7;
+    background-color: #FFFFFF;
     height: 10vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -17,21 +18,26 @@ header nav {
 }
 
 aside {
-    background-color: #3110da;
+    background-color: #0A66C2;
     width: 20%;
     color: white;
 }
 
 main {
     flex: 1;
-    background-color: #010e13;
+    background-color: #0A66C2;
     color: white;
+}
+
+section {
+    margin-bottom: 50px;
 }
 
 footer {
     height: 10vh;
-    background-color: #999;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }

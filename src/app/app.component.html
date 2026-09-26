@@ -1,30 +1,75 @@
 <header>
-<p>{{ title }}</p>
-<nav >
-    <br>
-    <a href="main ">Main </a>
-    <a href=" footer">footer</a>
-
-</nav>
+  <h1>{{ nombre }}</h1>
+  <p>{{ profesion }}</p>
+  <p>{{ profesion2 }}</p>
 </header>
- 
-<div class="main">
-<aside>
-    <h1>nombre</h1>
-    {{nombre}}<br>
-    {{ciudad}}<br>
-    {{telefono}}<br>
-    {{correo_electronico}}<br>
-    {{sitio_web}}<br>
-    {{Github}}<br>
-    {{idiomas}}
-</aside>
- 
-<main>
 
-</main>
+<div class="main">
+  <aside>
+    <section>
+      <h2>Datos personales</h2>
+
+      <p><strong>Nombre:</strong> {{ nombre }}</p>
+      <p><strong>Edad:</strong> {{ edad }}</p>
+      <p><strong>Dirección:</strong> {{ direccion }}</p>
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+
+      <p><strong>Ciudad:</strong> {{ ciudad }}</p>
+      <p><strong>Teléfono:</strong> {{ telefono }}</p>
+      <p><strong>Correo:</strong> {{ correoElectronico }}</p>
+      <p><strong>GitHub:</strong> {{ github }}</p>
+    </section>
+    <h2>Idiomas</h2>
+
+    <p>{{ idiomaNativo }}</p>
+    <p>{{ idiomaSecundario }}</p>
+  </aside>
+
+  <main>
+    <section>
+      <h2>Sobre mí</h2>
+
+      <img ngSrc="perfil.jpg" width="200" height="200" alt="Foto de perfil" />
+
+      <p>{{ descripcion }}</p>
+    </section>
+
+    <section>
+      <h2>Experiencia profesional</h2>
+
+      <h3>{{ experiencia1Empresa }}</h3>
+      <p>{{ experiencia1Puesto }}</p>
+      <p>{{ experiencia1Periodo }}</p>
+      <p>{{ experiencia1Descripcion }}</p>
+
+      <h3>{{ experiencia2Empresa }}</h3>
+      <p>{{ experiencia2Puesto }}</p>
+      <p>{{ experiencia2Periodo }}</p>
+      <p>{{ experiencia2Descripcion }}</p>
+    </section>
+
+    <section>
+      <h2>Formación</h2>
+
+      <p>{{ formacion }}</p>
+    </section>
+
+    <section>
+      <h2>Tecnologías</h2>
+
+      <ul>
+        @for (tecnologia of tecnologias; track tecnologia) {
+          <li>{{ tecnologia }}</li>
+        }
+      </ul>
+    </section>
+  </main>
 </div>
- 
-<footer id ="footer">
- {{fecha | date:'dd/MM/yyyy'}}
+
+<footer>
+  <p>{{ textoFooter }}</p>
+  <p>{{ fecha | date: "dd/MM/yyyy" }}</p>
 </footer>
