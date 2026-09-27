@@ -17,7 +17,7 @@ export class AppComponent {
   experiencia1 = 'Encargado de IT';
   periodo1 = '2023 - 2024';
   descripcionEmpresa1 =
-    'Desarrollo y mantenimiento de aplicaciones web utilizando tecnologías modernas.';
+    'Reparación de ordenadores, mantenimiento de redes y atención al cliente ';
 
   empresa2 = 'Restaurante Bartolini';
   experiencia2 = 'Repartidor de comida';
@@ -32,7 +32,7 @@ export class AppComponent {
   idiomaNativo = 'Español: Nativo';
   idiomaSecundario = 'Inglés: Basico';
   edad = 23;
-  direccion = 'Calle Sierra de las Nieves, 11, 29004 Málaga';
+  direccion = 'Calle Sierra de las Nieves, 11, 29567 Málaga';
 
   fecha = new Date();
 
@@ -47,5 +47,4 @@ export class AppComponent {
     'Angular',
     'SQL',
   ];
-
 }
