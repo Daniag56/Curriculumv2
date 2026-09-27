@@ -10,10 +10,21 @@ import { DatePipe, NgOptimizedImage } from '@angular/common';
 export class AppComponent {
   nombre = 'Daniel Arias García';
   profesion = 'Tecnico de Sistemas Microinformáticos y Redes';
-  profesion2 = "Desarrollador de Aplicaciones Multiplataforma en formación";
+  profesion2 = 'Desarrollador de Aplicaciones Multiplataforma en formación';
   descripcion =
-    'Apasionado de las nuevas tecnologías, el desarrollo de software y el cacharreo de hardware';
+    'Me encantan las nuevas tecnologías, el desarrollo de software y el cacharreo de hardware';
+  empresa1 = 'Centro Vuela';
+  experiencia1 = 'Encargado de IT';
+  periodo1 = '2023 - 2024';
+  descripcionEmpresa1 =
+    'Desarrollo y mantenimiento de aplicaciones web utilizando tecnologías modernas.';
 
+  empresa2 = 'Restaurante Bartolini';
+  experiencia2 = 'Repartidor de comida';
+  periodo2 = '2023 - 2025';
+  descripcionEmpresa2 = 'Repartidor de comida a domicilio';
+  formacion1 = 'Tecnico de Sistemas Microinformáticos y Redes en Ies Serrania';
+  formacion2 = 'Desarrollador de Aplicaciones Multiplataforma en Alan Touring';
   ciudad = 'Málaga';
   telefono = '665280386';
   correoElectronico = 'darigar2101@g.educaand.es';
@@ -21,11 +32,11 @@ export class AppComponent {
   idiomaNativo = 'Español: Nativo';
   idiomaSecundario = 'Inglés: Basico';
   edad = 23;
-  direccion = 'Calle Principal, 123';
+  direccion = 'Calle Sierra de las Nieves, 11, 29004 Málaga';
 
   fecha = new Date();
 
-  textoFooter = 'Currículum desarrollado con Angular';
+  textoPie = 'Currículum desarrollado con Angular';
 
   tecnologias = [
     'Java',
@@ -37,17 +48,4 @@ export class AppComponent {
     'SQL',
   ];
 
-  experiencia1Empresa = 'Centro Vuela';
-  experiencia1Puesto = 'Encargado de IT';
-  experiencia1Periodo = '2023 - 2024';
-  experiencia1Descripcion =
-    'Desarrollo y mantenimiento de aplicaciones web utilizando tecnologías modernas.';
-
-  experiencia2Empresa = 'Proyectos Académicos';
-  experiencia2Puesto = 'Desarrollador Full Stack';
-  experiencia2Periodo = '2022 - 2024';
-  experiencia2Descripcion =
-    'Creación de aplicaciones web y bases de datos durante la formación profesional.';
-
-  formacion = 'Tecnico de Sistemas Microinformáticos y Redes';
 }
