@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { DatePipe, NgOptimizedImage } from '@angular/common';
+import { HeaderComponent } from './componentes/header/header.component';
+import { FooterComponent } from './componentes/footer/footer.component';
+import { MainlayoutComponent } from './componentes/mainlayout/mainlayout.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [DatePipe, NgOptimizedImage],
+  imports: [DatePipe, NgOptimizedImage, HeaderComponent, FooterComponent, MainlayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
