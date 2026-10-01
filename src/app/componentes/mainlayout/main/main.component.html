@@ -1,1 +1,40 @@
-<p>main works!</p>
+<main>
+    <section>
+      <h2>Sobre mí</h2>
+
+      <img ngSrc="fotoPersonal.jpg" width="200" height="200" alt="Foto de perfil" />
+
+      <p>{{ descripcion }}</p>
+    </section>
+
+    <section>
+      <h2>Experiencia profesional</h2>
+
+      <h3>{{ empresa1 }}</h3>
+      <p>{{ experiencia1 }}</p>
+      <p>{{ periodo1 }}</p>
+      <p>{{ descripcionEmpresa1 }}</p>
+
+      <h3>{{ empresa2 }}</h3>
+      <p>{{ experiencia2 }}</p>
+      <p>{{ periodo2 }}</p>
+      <p>{{ descripcionEmpresa2 }}</p>
+    </section>
+
+    <section>
+      <h2>Formación</h2>
+
+      <p>{{ formacion1 }}</p>
+      <p>{{ formacion2 }}</p>
+    </section>
+
+    <section>
+      <h2>Tecnologías</h2>
+
+      <ul>
+        @for (tecnologia of tecnologias; track tecnologia) {
+          <span>{{ tecnologia }},</span>
+        }
+      </ul>
+    </section>
+  </main>

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrl: './footer.component.css',
 })
 export class FooterComponent {
+  fecha = new Date();
 
+  textoPie = 'Currículum desarrollado con Angular';
 }

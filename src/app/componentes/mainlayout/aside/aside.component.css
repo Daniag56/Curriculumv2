@@ -1,5 +1,9 @@
 :host {
-    background-color: #0A66C2;
-    width: 40%;
-    color: white;
+  width: 40%;
+  display: block;
+
+  background: #f4f4f4;
+  color: black;
+
+  padding: 20px;
 }

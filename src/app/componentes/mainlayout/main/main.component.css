@@ -1,0 +1,18 @@
+:host {
+  width: 60%;
+  display: block;
+
+  background: #0a66c2;
+  color: white;
+
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
