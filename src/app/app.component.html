@@ -1,5 +1,28 @@
-<app-header></app-header>
+<app-header
+  [nombre]="nombre"
+  [profesion]="profesion"
+  [profesion2]="profesion2"
+  [seccionActiva]="seccionActiva"
+  (seccionChange)="onSeccionChange($event)">
+</app-header>
 
-<app-mainlayout></app-mainlayout>
+<app-mainlayout
+  [descripcion]="descripcion"
+  [experiencias]="experiencias"
+  [formaciones]="formaciones"
+  [tecnologias]="tecnologias"
+  [seccionActiva]="seccionActiva"
+  [mostrarDatosPersonales]="mostrarDatosPersonales"
+  [nombre]="nombre"
+  [edad]="edad"
+  [direccion]="direccion"
+  [ciudad]="ciudad"
+  [telefono]="telefono"
+  [correoElectronico]="correoElectronico"
+  [github]="github"
+  [idiomaNativo]="idiomaNativo"
+  [idiomaSecundario]="idiomaSecundario"
+  (toggleDatosPersonales)="onToggleDatosPersonales($event)">
+</app-mainlayout>
 
-<app-footer></app-footer>
+<app-footer [textoPie]="textoPie" [fecha]="fecha"></app-footer>

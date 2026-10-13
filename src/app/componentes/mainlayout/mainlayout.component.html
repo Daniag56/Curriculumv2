@@ -1,4 +1,23 @@
 <div class="layout">
-<app-aside></app-aside>
-<app-main></app-main>
+  <app-aside
+    [mostrarDatosPersonales]="mostrarDatosPersonales"
+    [nombre]="nombre"
+    [edad]="edad"
+    [direccion]="direccion"
+    [ciudad]="ciudad"
+    [telefono]="telefono"
+    [correoElectronico]="correoElectronico"
+    [github]="github"
+    [idiomaNativo]="idiomaNativo"
+    [idiomaSecundario]="idiomaSecundario"
+    (toggleDatosPersonales)="toggleDatosPersonales.emit($event)">
+  </app-aside>
+
+  <app-main
+    [descripcion]="descripcion"
+    [experiencias]="experiencias"
+    [formaciones]="formaciones"
+    [tecnologias]="tecnologias"
+    [seccionActiva]="seccionActiva">
+  </app-main>
 </div>

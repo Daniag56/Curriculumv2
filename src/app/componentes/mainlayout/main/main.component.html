@@ -1,40 +1,48 @@
 <main>
-    <section>
-      <h2>Sobre mí</h2>
-
-      <img ngSrc="fotoPersonal.jpg" width="200" height="200" alt="Foto de perfil" />
-
-      <p>{{ descripcion }}</p>
-    </section>
-
-    <section>
-      <h2>Experiencia profesional</h2>
-
-      <h3>{{ empresa1 }}</h3>
-      <p>{{ experiencia1 }}</p>
-      <p>{{ periodo1 }}</p>
-      <p>{{ descripcionEmpresa1 }}</p>
-
-      <h3>{{ empresa2 }}</h3>
-      <p>{{ experiencia2 }}</p>
-      <p>{{ periodo2 }}</p>
-      <p>{{ descripcionEmpresa2 }}</p>
-    </section>
-
-    <section>
-      <h2>Formación</h2>
-
-      <p>{{ formacion1 }}</p>
-      <p>{{ formacion2 }}</p>
-    </section>
-
-    <section>
-      <h2>Tecnologías</h2>
-
-      <ul>
-        @for (tecnologia of tecnologias; track tecnologia) {
-          <span>{{ tecnologia }},</span>
+  @switch (seccionActiva) {
+    @case ('sobre-mi') {
+      <section>
+        <h2>Sobre mí</h2>
+        <img ngSrc="fotoPersonal.jpg" width="200" height="200" alt="Foto de perfil" />
+        <p>{{ descripcion }}</p>
+      </section>
+    }
+    @case ('experiencia') {
+      <section>
+        <h2>Experiencia profesional</h2>
+        @for (exp of experiencias; track exp.empresa) {
+          <article>
+            <h3>{{ exp.empresa }}</h3>
+            <p>{{ exp.puesto }}</p>
+            <p>{{ exp.periodo }}</p>
+            <p>{{ exp.descripcion }}</p>
+          </article>
+        } @empty {
+          <p>No hay experiencia profesional registrada.</p>
         }
-      </ul>
-    </section>
-  </main>
+      </section>
+    }
+    @case ('formacion') {
+      <section>
+        <h2>Formación</h2>
+        @for (form of formaciones; track form.titulo) {
+          <p>{{ form.titulo }} en {{ form.centro }}</p>
+        } @empty {
+          <p>No hay formación registrada.</p>
+        }
+      </section>
+    }
+    @case ('tecnologias') {
+      <section>
+        <h2>Tecnologías</h2>
+        <ul>
+          @for (tech of tecnologias; track tech) {
+            <li>{{ tech }}</li>
+          } @empty {
+            <li>No hay tecnologías registradas.</li>
+          }
+        </ul>
+      </section>
+    }
+  }
+</main>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  nombre = 'Daniel Arias García';
-  profesion = 'Tecnico de Sistemas Microinformáticos y Redes';
-  profesion2 = 'Desarrollador de Aplicaciones Multiplataforma en formación';
+  @Input() nombre = '';
+  @Input() profesion = '';
+  @Input() profesion2 = '';
+  @Input() seccionActiva:
+    | 'sobre-mi'
+    | 'experiencia'
+    | 'formacion'
+    | 'tecnologias' = 'sobre-mi';
+  @Output() seccionChange = new EventEmitter<'sobre-mi' | 'experiencia' | 'formacion' | 'tecnologias'>();
+
+  cambioSeccion(seccion: 'sobre-mi' | 'experiencia' | 'formacion' | 'tecnologias') {
+    this.seccionChange.emit(seccion);
+  }
 }
